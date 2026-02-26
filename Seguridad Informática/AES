@@ -1,20 +1,14 @@
 from cryptography.fernet import Fernet
 
-# ===============================
-# GENERAR CLAVE
-# ===============================
 
+# GENERAR CLAVE
 def generar_clave():
     """
     Genera una clave segura Fernet
     """
     return Fernet.generate_key()
 
-
-# ===============================
 # CIFRAR MENSAJE
-# ===============================
-
 def cifrar_mensaje(mensaje, clave):
     """
     Cifra un mensaje usando Fernet (AES)
@@ -24,11 +18,7 @@ def cifrar_mensaje(mensaje, clave):
     mensaje_cifrado = fernet.encrypt(mensaje_bytes)
     return mensaje_cifrado
 
-
-# ===============================
 # DESCIFRAR MENSAJE
-# ===============================
-
 def descifrar_mensaje(mensaje_cifrado, clave):
     """
     Descifra un mensaje usando Fernet (AES)
@@ -37,11 +27,7 @@ def descifrar_mensaje(mensaje_cifrado, clave):
     mensaje_descifrado = fernet.decrypt(mensaje_cifrado)
     return mensaje_descifrado.decode()
 
-
-# ===============================
 # PRUEBA DEL PROGRAMA
-# ===============================
-
 mensaje = "La criptografia moderna es segura y confiable"
 
 # Generar clave
