@@ -56,10 +56,10 @@ def descifrar_vigenere(texto_cifrado, clave):
     return texto_descifrado
 
 # PRUEBA 
-mensaje = "La criptografia es fundamental en seguridad"
-clave = "seguridad"
+mensaje = "método de cifrado polialfabético basado en sustituciones César múltiples"
+clave = "Giovan Battista Bellaso"
 
-print("=== CIFRADO VIGENÈRE ===\n")
+print("CIFRADO VIGENÈRE\n")
 
 print("Mensaje original:")
 print(mensaje)
