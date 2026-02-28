@@ -56,7 +56,7 @@ def descifrar_vigenere(texto_cifrado, clave):
     return texto_descifrado
 
 # PRUEBA 
-mensaje = "método de cifrado polialfabético basado en sustituciones César múltiples"
+mensaje = "El método de cifrado polialfabético basado en sustituciones César múltiples"
 clave = "Giovan Battista Bellaso"
 
 print("CIFRADO VIGENÈRE\n")

@@ -2,7 +2,7 @@
 # SHA-256
 import hashlib
 import os
-
+#Tenemos una base de datos simulada
 usuarios_db = {}
 
 def generar_sal():
@@ -20,7 +20,7 @@ def hash_con_sal(password, sal):
     hash_resultado = hashlib.sha256(sal + password_bytes).hexdigest()
     return hash_resultado
 
-
+#El usuario se registra
 def registrar_usuario(usuario, password):
     if usuario in usuarios_db:
         print("El usuario ya existe.")
@@ -36,7 +36,7 @@ def registrar_usuario(usuario, password):
 
     print(f"Usuario '{usuario}' registrado correctamente.")
 
-# INICIO DE SESIÓN
+# Se inicia sesión 
 def iniciar_sesion(usuario, password):
     if usuario not in usuarios_db:
         print("Usuario no encontrado.")
@@ -52,7 +52,7 @@ def iniciar_sesion(usuario, password):
         print("Contraseña incorrecta.")
 
 
-# PRUEBA DEL SISTEMA
+# Probamos el código con los usuarios registrados
 # Registro
 registrar_usuario("Daniela", "gonzalez.4087")
 
@@ -60,4 +60,4 @@ registrar_usuario("Daniela", "gonzalez.4087")
 iniciar_sesion("Daniela", "gonzalez.4087")
 
 # Login incorrecto
-iniciar_sesion("Daniela", "gonzalez.7840")
+iniciar_sesion("Daniela", "gonzalez.4078")
